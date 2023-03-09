@@ -11,6 +11,7 @@ import axios from "axios";
 import Spinner from "./../components/Spinner";
 import moment from "moment";
 import Analytics from "../components/Analytics";
+import './HomePage.css';
 const { RangePicker } = DatePicker;
 
 const HomePage = () => {
@@ -140,7 +141,8 @@ const HomePage = () => {
   };
 
   return (
-    <Layout>
+    <div>
+      <Layout>
       {loading && <Spinner />}
       <div className="filters">
         <div>
@@ -187,8 +189,7 @@ const HomePage = () => {
           />
         </div>
         <div>
-          <button
-            className="btn btn-primary"
+          <button className="button-abc"
             onClick={() => setShowModal(true)}
           >
             Add New
@@ -232,7 +233,7 @@ const HomePage = () => {
               <Select.Option value="bills">Bills</Select.Option>
               <Select.Option value="medical">Medical</Select.Option>
               <Select.Option value="fee">Fee</Select.Option>
-              <Select.Option value="tax">TAX</Select.Option>
+              <Select.Option value="tax">Tax</Select.Option>
             </Select>
           </Form.Item>
           <Form.Item label="Date" name="date">
@@ -253,6 +254,8 @@ const HomePage = () => {
         </Form>
       </Modal>
     </Layout>
+    </div>
+    
   );
 };
 

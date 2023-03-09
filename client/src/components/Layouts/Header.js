@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { message } from "antd";
-
+import './Header.css';
 const Header = () => {
     const [loginUser, setLoginUser] = useState("");
     const navigate = useNavigate();
@@ -42,7 +42,7 @@ const Header = () => {
                                 <p className="nav-link">{loginUser && loginUser.name}</p>{" "}
                             </li>
                             <li className="nav-item">
-                                <button className="btn btn-primary" onClick={logoutHandler}>
+                                <button onClick={logoutHandler}>
                                     Logout
                                 </button>
                             </li>

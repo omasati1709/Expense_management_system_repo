@@ -1,0 +1,11 @@
+/* .flex-container {
+    display: flex;
+    background-color: DodgerBlue;
+} */
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    text-align: center;
+}

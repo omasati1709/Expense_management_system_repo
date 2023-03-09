@@ -3,7 +3,8 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='bg-dark text-light p-4'>
-      <h6 className='text-center'>All rights reserved &copy; Om_Asati</h6>
+      
+      <h6 className='text-center'>All rights reserved &copy; Om Asati</h6>
     </div>
   )
 }

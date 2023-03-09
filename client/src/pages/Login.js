@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form, Input, message } from "antd";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../components/Spinner";
 const Login = () => {
@@ -32,11 +32,11 @@ const Login = () => {
   }, [navigate]);
   return (
     <>
-      <div className="resgister-page ">
+      <div className="resgister-page">
+        <div className="register-form-container">
         {loading && <Spinner />}
-        <Form layout="vertical" onFinish={submitHandler}>
+        <Form className="login-form" layout="vertical" onFinish={submitHandler}>
           <h1>Login Form</h1>
-
           <Form.Item label="Email" name="email">
             <Input type="email" />
           </Form.Item>
@@ -44,10 +44,15 @@ const Login = () => {
             <Input type="password" />
           </Form.Item>
           <div className="d-flex justify-content-between">
-            <Link to="/register">Not a user ? Cleck Here to regsiter</Link>
+            <div className="register-link">
+              <span>Not a user?</span>
+              <a href="/register">Register here</a>
+            </div>
             <button className="btn btn-primary">Login</button>
           </div>
         </Form>
+      </div>
+        
       </div>
     </>
   );

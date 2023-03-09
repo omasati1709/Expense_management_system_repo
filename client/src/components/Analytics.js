@@ -39,60 +39,60 @@ const categories=[
   return (
 
     <>
-        <div className='row m-3'>
-            <div className='col-md-4'>
-                <div className='card'>
-                    <div className='card-header'>
-                        Total Transection:{totalTransection}
-                    </div>
-                    <div className='card-body'>
-                        <h5 className='text-success'>Income : {totalIncomeTransection.length}</h5>
-                        <h5 className='text-danger'>Expense : {totalExpenseTransection.length}</h5>
-                        <div>
-                            <Progress
-                                type="circle"
-                                strokeColor={'green'}
-                                className='mx-2'
-                                percent={totalIncomePercent.toFixed(0)}
-                            />
-                            <Progress
-                                type="circle"
-                                strokeColor={'red'}
-                                className='mx-2'
-                                percent={totalExpensePercent.toFixed(0)}
-                            />
+        <div>
+            <div className='row mt-3'>
+                <div className='col-md-4'>
+                    <div className='card'>
+                        <div className='card-header'>
+                            Total Transection:{totalTransection}
+                        </div>
+                        <div className='card-body'>
+                            <h5 className='text-success'>Income : {totalIncomeTransection.length}</h5>
+                            <h5 className='text-danger'>Expense : {totalExpenseTransection.length}</h5>
+                            <div>
+                                <Progress
+                                    type="circle"
+                                    strokeColor={'green'}
+                                    className='mx-2'
+                                    percent={totalIncomePercent.toFixed(0)}
+                                />
+                                <Progress
+                                    type="circle"
+                                    strokeColor={'red'}
+                                    className='mx-2'
+                                    percent={totalExpensePercent.toFixed(0)}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>   
-        <div className='row m-3'>
             <div className='col-md-4'>
-                <div className='card'>
-                    <div className='card-header'>
-                        Total Turnover:{totalTurnover}
-                    </div>
-                    <div className='card-body'>
-                        <h5 className='text-success'>Income : {totalIncomeTurnover.length}</h5>
-                        <h5 className='text-danger'>Expense : {totalExpenseTurnover.length}</h5>
-                        <div>
-                            <Progress
-                                type="circle"
-                                strokeColor={'green'}
-                                className='mx-2'
-                                percent={totalIncomeTurnoverPercent.toFixed(0)}
-                            />
-                            <Progress
-                                type="circle"
-                                strokeColor={'red'}
-                                className='mx-2'
-                                percent={totalExpenseTurnoverPercent.toFixed(0)}
-                            />
+                    <div className='card'>
+                        <div className='card-header'>
+                            Total Turnover:{totalTurnover}
+                        </div>
+                        <div className='card-body'>
+                            <h5 className='text-success'>Income : {totalIncomeTurnover.length}</h5>
+                            <h5 className='text-danger'>Expense : {totalExpenseTurnover.length}</h5>
+                            <div>
+                                <Progress
+                                    type="circle"
+                                    strokeColor={'green'}
+                                    className='mx-2'
+                                    percent={totalIncomeTurnoverPercent.toFixed(0)}
+                                />
+                                <Progress
+                                    type="circle"
+                                    strokeColor={'red'}
+                                    className='mx-2'
+                                    percent={totalExpenseTurnoverPercent.toFixed(0)}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>  
+            </div>  
+        </div>
         <div className='row mt-3'>
             <div className='col-md-4'>
                 <h4>Categorywise Income</h4>
